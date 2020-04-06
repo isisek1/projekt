@@ -7,15 +7,15 @@ abstract class ustrednyTRUBL
     protected $napetiTRUBL;
 
 //nastavení napětí
-    public function setNapetiTRUBL($napetiTRUBL) {
+    public function setNapetiTRUBL($napetiTRUBL) :float {
         $this -> napetiTRUBL = $napetiTRUBL;
     }
-
+//pouze reálné číslo psané číslicí pomocí :float
 //přečtení napětí
-    public function getNapetiTRUBL() {
+    public function getNapetiTRUBL() :float{
         return $this -> napetiTRUBL;
     }
-
+//pouze reálné číslo psané číslicí pomocí :float
 }
 
 class ustrednaTRUBL extends ustrednyTRUBL
