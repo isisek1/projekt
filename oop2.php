@@ -2,8 +2,8 @@
 
 abstract class StringsTRUBL {
 
-    protected static function substrTRUBL($points) {
-        define($points, 'osmnáct');
+    protected static function substrTRUBL($body) {
+        define($body, 'osmnáct');
     }
 
     protected static function substr_replaceTRUBL($nahrada) {
@@ -56,24 +56,24 @@ abstract class StringsTRUBL {
         define($rozrhnestring, 'ČAU Ahoj Alloha');
     }
 
-    protected static function addcslashesTRUBL($vypiseoddo) {
-        define($vypiseoddo, '1,2,3,4,5,6,7,8,9,10');
+    protected static function addcslashesTRUBL($oddo) {
+        define($oddo, '1,2,3,4,5,6,7,8,9,10');
     }
 
-    protected static function addslashesTRUBL($vlozilomeno) {
-        define($vlozilomeno, 'MC´Donald');
+    protected static function addslashesTRUBL($lomeno) {
+        define($lomeno, 'MC´Donald');
     }
 
-    protected static function trimTRUBL($vynechcast) {
-        define($vynechcast, '\k\kped je jf\z\z');
+    protected static function trimTRUBL($vynechcastretezce) {
+        define($vynechcastretezce, '\k\kped je jf\z\z');
     }
 
-    protected static function ucfirstTRUBL($prvnivelke) {
-        define($prvnivelke, 'praha a plzeň');
+    protected static function ucfirstTRUBL($prvnipismenovelke) {
+        define($prvnipismenovelke, 'praha a plzeň');
     }
 
-    protected static function ucwordsTRUBL($kazdeprvnivelke) {
-        define($kazdeprvnivelke, 'praha a plzeň');
+    protected static function ucwordsTRUBL($kazdeprvnipismenovelke) {
+        define($kazdeprvnipismenovelke, 'praha a plzeň');
     }
 
 }
@@ -83,7 +83,7 @@ class SringTRUBL extends StringsTRUBL {
     //nahradi sttring jinym stringem
     public static function substrTRUBL() {
         parent::substrTRUBL();
-        return substr($points, null);
+        return substr($body, null);
     }
 
     //nahradí daný výraz za bitovou hodnotu
@@ -140,8 +140,8 @@ class SringTRUBL extends StringsTRUBL {
     }
 
     //vypíše řetězec od kolika do kolika
-    public function addcslashesTRUBL($vypiseoddo) {
-        return addcslashes($vypiseoddo, '\1...\7');
+    public function addcslashesTRUBL($oddo) {
+        return addcslashes($oddo, '\1...\7');
     }
 
     // vloží lomeno
@@ -150,24 +150,24 @@ class SringTRUBL extends StringsTRUBL {
     }
 
     //vynechá část řetězce, zbytek ne
-    public function trimTRUBL($vynechcast) {
-        return trim($vynechcast, '\h.');
+    public function trimTRUBL($vynechcastretezce) {
+        return trim($vynechcastretezce, '\h.');
     }
 
     //první písmeno v řetězci je velké
-    public function ucfirstTRUBL($prvnivelke) {
-        return ucfirst($prvnivelke);
+    public function ucfirstTRUBL($prvnipismenovelke) {
+        return ucfirst($prvnipismenovelke);
     }
 
     //každé první písmeno v řetězci je velké
-    public function ucwordsTRUBL($kazdeprvnivelke) {
-        return ucwords($kazdeprvnivelke);
+    public function ucwordsTRUBL($kazdeprvnipismenovelke) {
+        return ucwords($kazdeprvnipismenovelke);
     }
 
 }
 
 echo 'StringsTRUBL';
-var_dump(StringTRUBL::substrTRUBL(points));
+var_dump(StringTRUBL::substrTRUBL(body));
 
 
 
