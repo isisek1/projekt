@@ -1,10 +1,11 @@
 <?php
 
 class stringTRUBL {
-
+    
     static public function substrTRUBL($stringKterýmNahrazuji, $stringKterýNahrazuji) {
         return substr($stringKterýmNahrazuji, $stringKterýNahrazuji);
     }
+
 
     static public function substr__replaceTRUBL($stringKterýmNahrazuji1, $stringKterýNahrazuji1, $začátečníBit) {
         return substr_replace($stringKterýmNahrazuji1, $stringKterýNahrazuji1, $začátečníBit);
@@ -97,8 +98,8 @@ $délkaŘetězce = "Cego jsem tu";
 $Samohlásky = array('a', 'e', 'i', 'o', 'u', 'y');
 $Rozmezí = "";
 $veVětě = "Mam rad rizek";
-$Zpráva = "mango";
-$co = ",";
+$Zpráva = "spenat";
+$co = "_";
 $kam = array('pes', 'kocka', 'medved');
 $hranice = '""';
 $Věta2 = "pes kocka medved";
